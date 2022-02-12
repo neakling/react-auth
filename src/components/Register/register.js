@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./register.css";
 import { Button, Box } from "@mui/material";
 import { purple, blue } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const RegisterButton = styled(Button)({
     textTransform: "none",
@@ -30,6 +31,12 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [login, setLogin] = useState(true);
+
+    const user = useSelector((state) => state.user);
+
+    useEffect(() => {
+        console.log("here", user);
+    }, [user]);
 
     function handleFormSubmit(e) {
         e.preventDefault();
