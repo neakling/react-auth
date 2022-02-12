@@ -36,7 +36,7 @@ const Login = () => {
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     const [goToHome, setGoToHome] = useState(true);
-    const [te, sette] = useState(true);
+    const [tes, settes] = useState(true);
 
     useEffect(() => {
         console.log("here", user);
