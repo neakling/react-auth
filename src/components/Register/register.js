@@ -33,7 +33,6 @@ const Register = () => {
     const [login, setLogin] = useState(true);
 
     const user = useSelector((state) => state.user);
-    const [goToHome, setGoToHome] = useState(true);
 
     useEffect(() => {
         console.log("here", user);
